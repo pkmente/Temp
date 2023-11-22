@@ -14,6 +14,16 @@ const sensordataSchema = new Schema(
         type: Schema.Types.Number,
         required: true,
       },
+      voltage: {
+        type: Schema.Types.Number,
+        required: true,
+      },
+      current: {
+        type: Schema.Types.Number,
+        required: true,
+      },
+
+
     }
   );
   

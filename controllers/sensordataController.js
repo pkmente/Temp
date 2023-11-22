@@ -4,7 +4,7 @@ const SensorData = require("../models/sensordata");
 
 const sensordataHandler = async (req, res, next) => {
   
-  const {temperature,humidity} = req.body;
+  const {temperature,humidity,voltage,current} = req.body;
 
 
   
@@ -31,6 +31,8 @@ const sensordataHandler = async (req, res, next) => {
       {
         temperature: temperature,
         humidity: humidity,
+        voltage:voltage,
+        current:current,
         
       }
     );
@@ -39,6 +41,8 @@ const sensordataHandler = async (req, res, next) => {
       const newSensorData = new SensorData({
         temperature: temperature,
         humidity: humidity,
+        voltage:voltage,
+        current:current,
         
 
 
@@ -77,6 +81,8 @@ const getdataHandler = async (req, res, next) => {
   const data = {
     temperature: sensordata[0].temperature,
     humidity: sensordata[0].humidity,
+    voltage:sensordata[0].voltage,
+    current:sensordata[0].current,
    
 
     

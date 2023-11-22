@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use("/api", sensorDataRoutes);
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5600;
 mongoose.set('strictQuery', false);
 mongoose
   .connect(
