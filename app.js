@@ -16,14 +16,11 @@ const port = process.env.PORT || 5000;
 mongoose.set('strictQuery', false);
 mongoose
   .connect(
-    "mongodb+srv://chaitanya:MG76UbqEorfSUKMc@cluster0.lrwjfei.mongodb.net/chayu?retryWrites=true&w=majority")
+    "mongodb+srv://iotcourse:dbj987jXei6fmXvF@cluster0.pptezci.mongodb.net/iotcourse?retryWrites=true&w=majority")
   .then((result) => {
     console.log("app is running...");
     app.listen(port);
   }).catch((err) => {
     console.log(err);
   });
-
-
-
 
